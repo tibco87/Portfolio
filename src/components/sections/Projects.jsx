@@ -3,6 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import clipSmartImage from '../../assets/clipsmart-preview.png';
+import portfolioImage from '../../assets/portfolio-preview.png';
 import './Projects.css';
 
 // Placeholder projects - to be replaced with real projects
@@ -19,6 +20,16 @@ const projectsData = [
     },
     {
         id: 2,
+        title: 'Portfolio Web',
+        description: 'Modern personal portfolio website featuring a responsive design, dark mode, internationalization (i18n), and smooth animations. Built with a focus on performance and user experience.',
+        image: portfolioImage,
+        technologies: ['React', 'JavaScript', 'Vite', 'CSS', 'EmailJS'],
+        liveUrl: '#',
+        githubUrl: 'https://github.com/tibco87/Portfolio',
+        featured: true,
+    },
+    {
+        id: 3,
         title: 'Mobile Fitness App',
         description: 'Cross-platform mobile application for iOS and Android built with Flutter, featuring workout tracking & personalized fitness plans.',
         image: null,
@@ -28,21 +39,11 @@ const projectsData = [
         featured: true,
     },
     {
-        id: 3,
+        id: 4,
         title: 'Task Management Dashboard',
         description: 'A modern task management application with real-time collaboration features, built with Vue.js and Firebase.',
         image: null,
         technologies: ['Vue', 'Firebase', 'TypeScript', 'SASS'],
-        liveUrl: '#',
-        githubUrl: '#',
-        featured: false,
-    },
-    {
-        id: 4,
-        title: 'Portfolio Website',
-        description: 'Personal portfolio website showcasing my work and skills, built with React and modern CSS animations.',
-        image: null,
-        technologies: ['React', 'CSS', 'Framer Motion'],
         liveUrl: '#',
         githubUrl: '#',
         featured: false,
