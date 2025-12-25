@@ -1,0 +1,126 @@
+.about {
+    background: var(--bg-secondary);
+}
+
+.about__content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--space-4xl);
+    align-items: center;
+}
+
+.about__image-wrapper {
+    position: relative;
+}
+
+.about__profile-img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    display: block;
+}
+
+.about__image-decoration {
+    position: absolute;
+    top: var(--space-lg);
+    left: var(--space-lg);
+    right: calc(-1 * var(--space-lg));
+    bottom: calc(-1 * var(--space-lg));
+    border: 3px solid var(--accent-primary);
+    border-radius: var(--radius-xl);
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.about__text {
+    color: var(--text-secondary);
+}
+
+.about__intro {
+    font-family: var(--font-heading);
+    font-size: var(--fs-2xl);
+    font-weight: var(--fw-bold);
+    color: var(--text-primary);
+    margin-bottom: var(--space-lg);
+}
+
+.about__text p {
+    line-height: 1.8;
+}
+
+.about__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    margin-top: var(--space-2xl);
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--border-light);
+}
+
+.about__stat {
+    text-align: center;
+}
+
+.about__stat-value {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: var(--fs-3xl);
+    font-weight: var(--fw-bold);
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-xs);
+}
+
+.about__stat-label {
+    font-size: var(--fs-sm);
+    color: var(--text-tertiary);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .about__content {
+        grid-template-columns: 1fr;
+        gap: var(--space-2xl);
+    }
+
+    .about__image-wrapper {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about__intro {
+        font-size: var(--fs-xl);
+    }
+
+    .about__stats {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--space-md);
+    }
+
+    .about__stat-value {
+        font-size: var(--fs-2xl);
+    }
+
+    .about__stat-label {
+        font-size: var(--fs-xs);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .about__text,
+    .about__stats,
+    .about__stat,
+    .about__intro {
+        width: 100%;
+        max-width: 100%;
+        overflow-wrap: break-word;
+    }
+}

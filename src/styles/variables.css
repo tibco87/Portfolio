@@ -1,0 +1,188 @@
+/* ===== CSS VARIABLES - DESIGN SYSTEM ===== */
+
+:root {
+  /* Typography */
+  --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Outfit', 'Inter', sans-serif;
+  --font-mono: 'Fira Code', 'Consolas', monospace;
+
+  /* Font Sizes */
+  --fs-xs: 0.75rem;
+  --fs-sm: 0.875rem;
+  --fs-base: 1rem;
+  --fs-md: 1.125rem;
+  --fs-lg: 1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-2xl: 2rem;
+  --fs-3xl: 2.5rem;
+  --fs-4xl: 3rem;
+  --fs-5xl: 4rem;
+  --fs-6xl: 5rem;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+  --fw-extrabold: 800;
+
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.3);
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+  --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  /* Z-index */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 300;
+  --z-overlay: 400;
+  --z-max: 999;
+
+  /* Container */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+  --container-2xl: 1536px;
+
+  /* Breakpoints */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
+  --bp-desktop: 1280px;
+}
+
+@media (max-width: 768px) {
+  /* Media query reverted */
+}
+
+/* ===== LIGHT THEME ===== */
+[data-theme="light"] {
+  /* Background Colors */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  /* Keep subtle gray */
+  --bg-tertiary: #f1f5f9;
+  --bg-elevated: #ffffff;
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* Text Colors -- Darkened for better contrast */
+  --text-primary: #0f172a;
+  /* Slate 900 - Sharp black/blue */
+  --text-secondary: #334155;
+  /* Slate 700 - Significantly darker than Slate 600 */
+  --text-tertiary: #64748b;
+  /* Slate 500 */
+  --text-inverse: #ffffff;
+
+  /* Accent Colors -- Increased vibrancy */
+  --accent-primary: #4f46e5;
+  /* Indigo 600 - Darker/Rich to pop on white */
+  --accent-secondary: #7c3aed;
+  /* Violet 600 */
+  --accent-tertiary: #9333ea;
+  /* Purple 600 */
+  --accent-secondary: #8b5cf6;
+  --accent-tertiary: #a855f7;
+  --accent-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a855f7 100%);
+
+  /* Semantic Colors */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+  --color-info: #3b82f6;
+
+  /* Border Colors */
+  --border-light: #e2e8f0;
+  --border-medium: #cbd5e1;
+  --border-dark: #94a3b8;
+
+  /* Card */
+  --card-bg: #ffffff;
+  --card-border: #e2e8f0;
+  --card-shadow: var(--shadow-md);
+
+  /* Navbar */
+  --navbar-bg: rgba(255, 255, 255, 0.8);
+  --navbar-border: rgba(226, 232, 240, 0.8);
+
+  /* Intro */
+  --intro-bg-left: #6366f1;
+  --intro-bg-right: #8b5cf6;
+  --intro-text: #ffffff;
+}
+
+/* ===== DARK THEME ===== */
+[data-theme="dark"] {
+  /* Background Colors */
+  --bg-primary: #0f0f1a;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #252542;
+  --bg-elevated: #1e1e35;
+  --bg-overlay: rgba(0, 0, 0, 0.7);
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #64748b;
+  --text-inverse: #0f172a;
+
+  /* Accent Colors */
+  --accent-primary: #818cf8;
+  --accent-secondary: #a78bfa;
+  --accent-tertiary: #c084fc;
+  --accent-gradient: linear-gradient(135deg, #818cf8 0%, #a78bfa 50%, #c084fc 100%);
+
+  /* Semantic Colors */
+  --color-success: #4ade80;
+  --color-warning: #fbbf24;
+  --color-error: #f87171;
+  --color-info: #60a5fa;
+
+  /* Border Colors */
+  --border-light: #2d2d4a;
+  --border-medium: #3d3d5c;
+  --border-dark: #4d4d6c;
+
+  /* Card */
+  --card-bg: #1e1e35;
+  --card-border: #2d2d4a;
+  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+
+  /* Navbar */
+  --navbar-bg: rgba(15, 15, 26, 0.9);
+  --navbar-border: rgba(45, 45, 74, 0.8);
+
+  /* Intro */
+  --intro-bg-left: #1a1a2e;
+  --intro-bg-right: #252542;
+  --intro-text: #f8fafc;
+}

@@ -1,0 +1,13 @@
+/* App specific styles */
+.app {
+    opacity: 1;
+    transition: opacity var(--transition-slow);
+}
+
+.app--hidden {
+    opacity: 0;
+}
+
+main {
+    min-height: 100vh;
+}
