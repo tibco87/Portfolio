@@ -5,7 +5,7 @@ import { useLanguage } from '../../context/LanguageContext';
 import {
     SiReact, SiVuedotjs, SiJavascript, SiTypescript, SiCss3, SiSass, SiTailwindcss,
     SiNodedotjs, SiPhp, SiPython,
-    SiFlutter, SiApple, SiAndroid,
+    SiFlutter, SiVite,
     SiSupabase, SiFirebase, SiPostgresql, SiDocker,
 } from 'react-icons/si';
 import { VscCode } from 'react-icons/vsc'; // For Cursor/Windsurf/VS Code generic code icons
@@ -31,8 +31,6 @@ const skillsData = {
     ],
     mobile: [
         { name: 'Flutter', icon: <SiFlutter color="#02569B" /> },
-        { name: 'iOS', icon: <SiApple color="currentColor" /> },
-        { name: 'Android', icon: <SiAndroid color="#3DDC84" /> },
     ],
     databases: [
         { name: 'Supabase', icon: <SiSupabase color="#3ECF8E" /> },
@@ -40,6 +38,7 @@ const skillsData = {
         { name: 'PostgreSQL', icon: <SiPostgresql color="#336791" /> },
     ],
     tools: [
+        { name: 'Vite', icon: <SiVite color="#646CFF" /> },
         { name: 'Docker', icon: <SiDocker color="#2496ED" /> },
         { name: 'VS Code', icon: <VscCode color="#007ACC" /> },
         { name: 'Cursor', icon: <VscCode color="currentColor" /> },
