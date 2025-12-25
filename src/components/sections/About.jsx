@@ -15,7 +15,7 @@ function About() {
     const stats = [
         { key: 'yearsExperience', value: '3+' },
         { key: 'projectsCompleted', value: '10+' },
-        { key: 'technologiesUsed', value: '20+' },
+        { key: 'technologiesUsed', value: '15+' },
     ];
 
     const currentProfileImage = resolvedTheme === 'light' ? profileImageLight : profileImage;
