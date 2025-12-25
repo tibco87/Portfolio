@@ -3,7 +3,7 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
 import {
-    SiReact, SiVuedotjs, SiJavascript, SiTypescript, SiCss3, SiSass, SiTailwindcss,
+    SiReact, SiVuedotjs, SiJavascript, SiTypescript, SiNextdotjs, SiCss3, SiSass, SiTailwindcss,
     SiNodedotjs, SiPhp, SiPython,
     SiFlutter, SiVite,
     SiSupabase, SiFirebase, SiPostgresql, SiDocker,
@@ -16,6 +16,7 @@ import './Skills.css';
 const skillsData = {
     frontend: [
         { name: 'React', icon: <SiReact color="#61DAFB" /> },
+        { name: 'Next.js', icon: <SiNextdotjs color="#000000" style={{ color: 'var(--text-primary)' }} /> },
         { name: 'Vue', icon: <SiVuedotjs color="#4FC08D" /> },
         { name: 'JavaScript', icon: <SiJavascript color="#F7DF1E" /> },
         { name: 'TypeScript', icon: <SiTypescript color="#3178C6" /> },
