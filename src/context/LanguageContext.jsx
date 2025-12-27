@@ -10,11 +10,19 @@ export const LANGUAGES = {
 
 export function LanguageProvider({ children }) {
     const [language, setLanguage] = useState(() => {
+        // 1. Try to get language from URL
+        const pathLang = window.location.pathname.split('/')[1];
+        if (pathLang === LANGUAGES.EN || pathLang === LANGUAGES.SK) {
+            return pathLang;
+        }
+
+        // 2. Try to get from localStorage
         const saved = localStorage.getItem('language');
         if (saved && (saved === LANGUAGES.EN || saved === LANGUAGES.SK)) {
             return saved;
         }
-        // Try to detect browser language
+
+        // 3. Try to detect browser language
         const browserLang = navigator.language.split('-')[0];
         return browserLang === 'sk' ? LANGUAGES.SK : LANGUAGES.EN;
     });

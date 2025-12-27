@@ -1,8 +1,16 @@
+import { useNavigate, useLocation } from 'react-router-dom';
 import { useLanguage, LANGUAGES } from '../../context/LanguageContext';
 import './LanguageToggle.css';
 
 function LanguageToggle() {
-    const { language, toggleLanguage } = useLanguage();
+    const { language } = useLanguage();
+    const navigate = useNavigate();
+    const location = useLocation();
+
+    const toggleLanguage = () => {
+        const newLang = language === LANGUAGES.EN ? LANGUAGES.SK : LANGUAGES.EN;
+        navigate(`/${newLang}${location.hash}`);
+    };
 
     return (
         <button
