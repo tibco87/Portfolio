@@ -13,8 +13,8 @@ export const translations = {
     hero: {
       greeting: "Hi, I'm",
       name: 'Tibor Kútik',
-      title: 'Full-Stack Developer',
-      subtitle: '& Mobile App Developer',
+      title: 'Full-Stack Web &',
+      subtitle: 'Mobile App Developer',
       description: 'Building robust, scalable digital solutions with a focus on performance, user experience, and modern architecture. Transforming complex requirements into elegant, high-quality software.',
       cta: 'View My Work',
       contact: 'Get In Touch',
