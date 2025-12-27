@@ -5,10 +5,10 @@ import emailjs from '@emailjs/browser';
 import { useLanguage } from '../../context/LanguageContext';
 import './Contact.css';
 
-// EmailJS configuration - to be filled in by user
-const EMAILJS_SERVICE_ID = 'service_rzitatr';
-const EMAILJS_TEMPLATE_ID = 'template_oo4qijl';
-const EMAILJS_PUBLIC_KEY = 'sbuylDoXo-YRrsYly';
+// EmailJS configuration
+const EMAILJS_SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const EMAILJS_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const EMAILJS_PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 // Social links - to be filled in by user
 const socialLinks = [
