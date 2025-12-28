@@ -12,16 +12,21 @@ export const LANGUAGES = {
 export function LanguageProvider({ children }) {
     const location = useLocation();
 
+    // Valid check helper
+    const isValidLang = (lang) => lang === LANGUAGES.EN || lang === LANGUAGES.SK;
+
     const [language, setLanguage] = useState(() => {
         // 1. HIGHEST PRIORITY: URL
-        const pathLang = window.location.pathname.split('/')[1];
-        if (pathLang === LANGUAGES.EN || pathLang === LANGUAGES.SK) {
+        const path = window.location.pathname;
+        const pathLang = path.split('/')[1];
+
+        if (isValidLang(pathLang)) {
             return pathLang;
         }
 
         // 2. SECOND PRIORITY: LocalStorage
         const saved = localStorage.getItem('language');
-        if (saved === LANGUAGES.EN || saved === LANGUAGES.SK) {
+        if (isValidLang(saved)) {
             return saved;
         }
 
@@ -30,8 +35,7 @@ export function LanguageProvider({ children }) {
         return browserLang === 'sk' ? LANGUAGES.SK : LANGUAGES.EN;
     });
 
-    // Valid check helper
-    const isValidLang = (lang) => lang === LANGUAGES.EN || lang === LANGUAGES.SK;
+
 
     // Synchronize language state with URL changes
     useEffect(() => {
