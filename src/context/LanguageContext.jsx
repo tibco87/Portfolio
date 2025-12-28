@@ -13,30 +13,35 @@ export function LanguageProvider({ children }) {
     const location = useLocation();
 
     const [language, setLanguage] = useState(() => {
-        // 1. Try to get language from URL
+        // 1. HIGHEST PRIORITY: URL
         const pathLang = window.location.pathname.split('/')[1];
         if (pathLang === LANGUAGES.EN || pathLang === LANGUAGES.SK) {
             return pathLang;
         }
 
-        // 2. Try to get from localStorage
+        // 2. SECOND PRIORITY: LocalStorage
         const saved = localStorage.getItem('language');
-        if (saved && (saved === LANGUAGES.EN || saved === LANGUAGES.SK)) {
+        if (saved === LANGUAGES.EN || saved === LANGUAGES.SK) {
             return saved;
         }
 
-        // 3. Try to detect browser language
+        // 3. LOWEST PRIORITY: Browser Detection
         const browserLang = navigator.language.split('-')[0];
         return browserLang === 'sk' ? LANGUAGES.SK : LANGUAGES.EN;
     });
 
+    // Valid check helper
+    const isValidLang = (lang) => lang === LANGUAGES.EN || lang === LANGUAGES.SK;
+
     // Synchronize language state with URL changes
     useEffect(() => {
         const pathLang = location.pathname.split('/')[1];
-        if (pathLang === LANGUAGES.EN || pathLang === LANGUAGES.SK) {
+
+        // If URL has a valid language code
+        if (isValidLang(pathLang)) {
+            // AND it's different from current state
             if (pathLang !== language) {
                 setLanguage(pathLang);
-                // We typically update localStorage here too, to remember user's last choice
                 localStorage.setItem('language', pathLang);
             }
         }
