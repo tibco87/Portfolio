@@ -22,15 +22,7 @@ function RootRedirect() {
 
 function MainApp() {
   const { lang } = useParams();
-  const { language, changeLanguage } = useLanguage();
   const [introComplete, setIntroComplete] = useState(false);
-
-  useEffect(() => {
-    // Sync URL param with Context
-    if (lang && (lang === LANGUAGES.EN || lang === LANGUAGES.SK) && lang !== language) {
-      changeLanguage(lang);
-    }
-  }, [lang, language, changeLanguage]);
 
   const handleIntroComplete = () => {
     setIntroComplete(true);

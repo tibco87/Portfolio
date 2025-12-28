@@ -1,4 +1,5 @@
-import { createContext, useContext, useState, useCallback } from 'react';
+import { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import translations from '../i18n/translations';
 
 const LanguageContext = createContext();
@@ -9,6 +10,8 @@ export const LANGUAGES = {
 };
 
 export function LanguageProvider({ children }) {
+    const location = useLocation();
+
     const [language, setLanguage] = useState(() => {
         // 1. Try to get language from URL
         const pathLang = window.location.pathname.split('/')[1];
@@ -26,6 +29,18 @@ export function LanguageProvider({ children }) {
         const browserLang = navigator.language.split('-')[0];
         return browserLang === 'sk' ? LANGUAGES.SK : LANGUAGES.EN;
     });
+
+    // Synchronize language state with URL changes
+    useEffect(() => {
+        const pathLang = location.pathname.split('/')[1];
+        if (pathLang === LANGUAGES.EN || pathLang === LANGUAGES.SK) {
+            if (pathLang !== language) {
+                setLanguage(pathLang);
+                // We typically update localStorage here too, to remember user's last choice
+                localStorage.setItem('language', pathLang);
+            }
+        }
+    }, [location.pathname, language]);
 
     const changeLanguage = useCallback((lang) => {
         if (lang === LANGUAGES.EN || lang === LANGUAGES.SK) {
