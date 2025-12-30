@@ -26,6 +26,9 @@ function SEO() {
             <meta property="og:description" content={currentMeta.description} />
             <meta property="og:locale" content={language === LANGUAGES.SK ? 'sk_SK' : 'en_US'} />
             <link rel="canonical" href={`https://www.tibcoo.sk/${language}`} />
+            <link rel="alternate" hreflang="en" href="https://www.tibcoo.sk/en" />
+            <link rel="alternate" hreflang="sk" href="https://www.tibcoo.sk/sk" />
+            <link rel="alternate" hreflang="x-default" href="https://www.tibcoo.sk/en" />
         </Helmet>
     );
 }
