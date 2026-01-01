@@ -15,7 +15,7 @@ const projectsData = [
         image: clipSmartImage,
         technologies: ['JavaScript', 'Chrome API', 'HTML/CSS', 'Stripe'],
         liveUrl: 'https://chromewebstore.google.com/detail/clipsmart-%E2%80%93-clipboard-man/nbpndheaoecmgnlmfpleeahoicpcbppj?utm_source=ext_app_menu',
-        githubUrl: 'https://github.com/tibco87/ClipsmartFinal',
+        githubUrl: 'https://github.com/tibco87/ClipSmart',
         featured: true,
     },
     {
