@@ -1,11 +1,6 @@
 {
     "redirects": [
         {
-            "source": "/",
-            "destination": "/en",
-            "statusCode": 301
-        },
-        {
             "source": "/index.html",
             "destination": "/en",
             "statusCode": 301
