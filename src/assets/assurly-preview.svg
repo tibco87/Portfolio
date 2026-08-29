@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" width="1200" height="750" role="img" aria-label="Assurly - production readiness verifier">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f1020"/>
+      <stop offset="55%" stop-color="#171730"/>
+      <stop offset="100%" stop-color="#1d1b3a"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#818cf8"/>
+      <stop offset="55%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.12" r="0.6">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="0.1" cy="0.95" r="0.55">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#ffffff" stroke-opacity="0.035" stroke-width="1"/>
+    </pattern>
+    <filter id="soft" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="24" flood-color="#05050f" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect width="1200" height="750" fill="url(#grid)"/>
+  <rect width="1200" height="750" fill="url(#glow)"/>
+  <rect width="1200" height="750" fill="url(#glow2)"/>
+
+  <!-- Brand row -->
+  <g transform="translate(80 84)">
+    <path d="M26 0 52 11v18c0 16.5-10.6 30.9-26 35.6C10.6 59.9 0 45.5 0 29V11Z" fill="url(#brand)"/>
+    <path d="M14.5 31.5 22.5 39.5 38 22.5" fill="none" stroke="#0f1020" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="72" y="47" font-family="Outfit, Inter, 'Segoe UI', system-ui, sans-serif" font-size="42" font-weight="700" fill="#f8fafc" letter-spacing="-0.5">Assurly</text>
+  </g>
+
+  <g transform="translate(905 86)">
+    <rect width="215" height="46" rx="23" fill="#818cf8" fill-opacity="0.12" stroke="#818cf8" stroke-opacity="0.35"/>
+    <circle cx="30" cy="23" r="5" fill="#34d399"/>
+    <text x="50" y="30" font-family="'Fira Code', Consolas, monospace" font-size="19" fill="#c7d2fe">assurly.dev</text>
+  </g>
+
+  <!-- Headline -->
+  <text x="80" y="215" font-family="Outfit, Inter, 'Segoe UI', system-ui, sans-serif" font-size="52" font-weight="700" fill="#f8fafc" letter-spacing="-1">Ship Gate for AI-generated SaaS</text>
+  <text x="80" y="262" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="25" fill="#a5b4fc">Config, security &amp; integration audit before you deploy</text>
+
+  <!-- Terminal -->
+  <g transform="translate(80 310)" filter="url(#soft)">
+    <rect width="1040" height="368" rx="18" fill="#0b0b18" fill-opacity="0.92" stroke="#818cf8" stroke-opacity="0.28"/>
+    <rect width="1040" height="52" rx="18" fill="#ffffff" fill-opacity="0.04"/>
+    <rect y="34" width="1040" height="18" fill="#ffffff" fill-opacity="0.04"/>
+    <line y1="52" x2="1040" y2="52" stroke="#818cf8" stroke-opacity="0.20"/>
+    <circle cx="28" cy="26" r="6.5" fill="#f87171"/>
+    <circle cx="52" cy="26" r="6.5" fill="#fbbf24"/>
+    <circle cx="76" cy="26" r="6.5" fill="#34d399"/>
+    <text x="110" y="32" font-family="'Fira Code', Consolas, monospace" font-size="17" fill="#64748b">~/my-saas — production readiness</text>
+
+    <g font-family="'Fira Code', Consolas, monospace" font-size="21">
+      <text x="36" y="104" fill="#818cf8">$</text>
+      <text x="62" y="104" fill="#e2e8f0">npx assurly scan</text>
+
+      <text x="36" y="150" fill="#34d399">✓</text>
+      <text x="66" y="150" fill="#cbd5e1">Supabase RLS enabled on 14 tables</text>
+
+      <text x="36" y="192" fill="#34d399">✓</text>
+      <text x="66" y="192" fill="#cbd5e1">Stripe webhook signature verified</text>
+
+      <text x="36" y="234" fill="#fbbf24">!</text>
+      <text x="66" y="234" fill="#cbd5e1">Service-role key reachable from client bundle</text>
+
+      <text x="36" y="276" fill="#34d399">✓</text>
+      <text x="66" y="276" fill="#cbd5e1">Next.js env vars scoped correctly</text>
+
+      <text x="36" y="318" fill="#34d399">✓</text>
+      <text x="66" y="318" fill="#cbd5e1">Vercel env parity: preview vs. production</text>
+    </g>
+
+    <g transform="translate(690 116)">
+      <rect width="314" height="72" rx="14" fill="#a78bfa" fill-opacity="0.10" stroke="#a78bfa" stroke-opacity="0.30"/>
+      <text x="24" y="30" font-family="Inter, 'Segoe UI', system-ui, sans-serif" font-size="15" fill="#a5b4fc" letter-spacing="1.5">SHIP GATE</text>
+      <text x="24" y="56" font-family="Outfit, Inter, system-ui, sans-serif" font-size="22" font-weight="600" fill="#f8fafc">23 passed · 1 blocker</text>
+    </g>
+  </g>
+
+</svg>
