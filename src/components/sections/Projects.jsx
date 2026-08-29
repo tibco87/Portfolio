@@ -2,14 +2,25 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { useLanguage } from '../../context/LanguageContext';
+import assurlyImage from '../../assets/assurly-preview.svg';
 import clipSmartImage from '../../assets/clipsmart-preview.png';
 import portfolioImage from '../../assets/portfolio-preview.png';
 import './Projects.css';
 
-// Placeholder projects - to be replaced with real projects
+// Ordered by prominence - the first entries are the highlighted work
 const projectsData = [
     {
-        id: 1,
+        id: 'assurly',
+        title: 'Assurly – Production Readiness Verifier',
+        description: 'Ship Gate for AI-generated SaaS: a static analysis engine that scans Next.js, Supabase, Stripe and Vercel projects for configuration, security and integration flaws before deployment. Ships as a CLI, an MCP server for AI agents, and a web audit dashboard.',
+        image: assurlyImage,
+        technologies: ['TypeScript', 'Next.js', 'Supabase', 'Stripe', 'MCP'],
+        liveUrl: 'https://assurly.dev',
+        githubUrl: 'https://github.com/assurly/assurly',
+        featured: true,
+    },
+    {
+        id: 'clipsmart',
         title: 'ClipSmart – Clipboard Manager',
         description: 'Smart clipboard manager with unlimited history, instant translation to 40 languages, and powerful search. Boost your productivity with advanced clipboard tools.',
         image: clipSmartImage,
@@ -19,7 +30,7 @@ const projectsData = [
         featured: true,
     },
     {
-        id: 2,
+        id: 'portfolio',
         title: 'Portfolio Web',
         description: 'Modern personal portfolio website featuring a responsive design, dark mode, internationalization (i18n), and smooth animations. Built with a focus on performance and user experience.',
         image: portfolioImage,
@@ -29,7 +40,7 @@ const projectsData = [
         featured: true,
     },
     {
-        id: 3,
+        id: 'fitness-app',
         title: 'Mobile Fitness App',
         description: 'Cross-platform mobile application for iOS and Android built with Flutter, featuring workout tracking & personalized fitness plans.',
         image: null,
@@ -39,7 +50,7 @@ const projectsData = [
         featured: true,
     },
     {
-        id: 4,
+        id: 'task-dashboard',
         title: 'Task Management Dashboard',
         description: 'A modern task management application with real-time collaboration features, built with Vue.js and Firebase.',
         image: null,
